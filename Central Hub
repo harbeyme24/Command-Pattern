@@ -1,0 +1,17 @@
+package SoftEng1;
+
+interface Device {
+    void performAction(String action);
+}
+
+class CentralHub {
+    private Device device;
+
+    public CentralHub(Device device) {
+        this.device = device;
+    }
+
+    public void performAction(String action) {
+        device.performAction(action);
+    }
+}
