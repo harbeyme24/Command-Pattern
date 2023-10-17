@@ -1,0 +1,16 @@
+package SoftEng1;
+
+public interface Device {
+    void turnOn();
+    void turnOff();
+}
+
+interface Dimmable {
+    void increase();
+    void decrease();
+}
+
+interface MusicPlayerDevice {
+    void playSong(String songName);
+    void stopPlayback();
+}
