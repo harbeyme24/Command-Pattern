@@ -1,0 +1,47 @@
+package SoftEng1;
+
+public class Thermostat implements Device {
+    private boolean isOn;
+    private int temperature;
+
+    public Thermostat() {
+        isOn = false;
+        temperature = 20; // Set an initial temperature
+    }
+
+    @Override
+    public void turnOn() {
+        if (!isOn) {
+            isOn = true;
+            System.out.println("Thermostat is ON");
+        }
+    }
+
+    @Override
+    public void turnOff() {
+        if (isOn) {
+            isOn = false;
+            System.out.println("Thermostat is OFF");
+        }
+    }
+
+    @Override
+    public void increase() {
+        if (isOn) {
+            temperature++;
+            System.out.println("Temperature increased to " + temperature);
+        } else {
+            System.out.println("Thermostat is OFF. Cannot adjust temperature.");
+        }
+    }
+
+    @Override
+    public void decrease() {
+        if (isOn) {
+            temperature--;
+            System.out.println("Temperature decreased to " + temperature);
+        } else {
+            System.out.println("Thermostat is OFF. Cannot adjust temperature.");
+        }
+    }
+}
