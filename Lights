@@ -1,0 +1,21 @@
+package SoftEng1;
+
+public class Light implements Device {
+    private boolean isOn;
+
+    public Light() {
+        isOn = false;
+    }
+
+    @Override
+    public void turnOn() {
+        isOn = true;
+        System.out.println("Light is ON");
+    }
+
+    @Override
+    public void turnOff() {
+        isOn = false;
+        System.out.println("Light is OFF");
+    }
+}
